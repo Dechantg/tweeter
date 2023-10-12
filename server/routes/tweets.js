@@ -23,11 +23,14 @@ module.exports = function(DataHelpers) {
       return;
     }
 
+    const tweetText = req.body.text;
+    console.log(tweetText)
+
     const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
     const tweet = {
       user: user,
       content: {
-        text: req.body.text
+        text: tweetText
       },
       created_at: Date.now()
     };
@@ -44,3 +47,5 @@ module.exports = function(DataHelpers) {
   return tweetsRoutes;
 
 }
+
+

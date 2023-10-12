@@ -1,0 +1,70 @@
+
+
+/* CSS for styling the tweet text input area */
+
+.new-tweet {
+  position: absolute;
+  top: 420px; /* Ensure that new-tweet doesn't overlap with the nav bar */
+  left: 5%;
+  width: 90%;
+  padding: 20px; /* Adjust the padding as needed */
+}
+
+
+#tweet-text {
+  width: 550px;
+  height: 120px;
+  font-size: 28px;
+  font-family: sans-serif;
+  width: 90%;
+
+  border: none;
+  border-bottom: 5px solid #ccc;
+  background-color: #f4f1ec;
+  text-align: left;
+  caret-color: transparent;
+}
+
+
+/* Style the tweet button */
+.new-tweet button {
+  background-color: blue; 
+  
+  color: white; 
+  font-family: 'Bungee', sans-serif;
+  font-size: 24px;
+  padding: 10px 20px;
+  border: none; 
+  cursor: pointer;
+}
+
+#tweet-text::placeholder {
+  color: #888;
+  font-family: sans-serif;
+  content: attr(placeholder);
+  position: absolute;
+  pointer-events: none; 
+  line-height: 100px; 
+}
+
+.new-tweet h2 {
+  font-family: sans-serif;
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.new-tweet .counter {
+  font-family: 'Bungee', sans-serif;
+  text-align: right;
+  margin-top: 5px;
+  margin-right: 4em;
+  
+  float: right;
+  color: black; /* Default text color */
+}
+
+/* Define the negative class for changing color to red */
+.new-tweet .negative {
+  color: red;
+}

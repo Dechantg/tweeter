@@ -1,0 +1,52 @@
+
+/* CSS file for styling the top Nav bar */
+
+nav {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  background-color: blue;
+  z-index: 1;
+  top: 0; /* Keep the nav bar at the top of the viewport */
+}
+
+
+.nav-container {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 10px 100px 0px 0px;
+}
+
+
+
+
+.left-text {
+  font-family: 'Bungee', sans-serif;
+  color: white;
+  font-size: 48px;
+  text-align: left;
+  margin-left: 1.5em;
+
+}
+
+.right-text {
+  font-family: 'Bungee', sans-serif;
+  color: white;
+  font-size: 24px;
+  text-align: right;
+  margin-right: 1.5em;
+}
+
+.right-text-arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-angles-down {
+  font-size: 24px; 
+  color: red; 
+}
