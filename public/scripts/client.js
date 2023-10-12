@@ -7,43 +7,20 @@
 
 
 
-// Fake data taken from initial-tweets.json
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
 
 const renderTweets = function(tweets) {
-  const $tweetsContainer = $('.main-container');
-  
+  const $tweetsContainer = $('#tweets-container'); // Select the container
+
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $tweetsContainer.append($tweet);
+    $tweetsContainer.prepend($tweet);
   }
 }
 
+
+
 const createTweetElement = function(tweet) {
-  
+
   //move over article and formatting from index.html
 
   const $article = $('<article>').addClass('tweets-article');
@@ -58,7 +35,7 @@ const createTweetElement = function(tweet) {
 
   // add tweet text
   const $textContent = $('<p>').text(tweet.content.text).addClass('tweet-text');
-  
+
   // add date and icons in footer. convert date to day only
   const $footer = $('<div>').addClass('tweet-footer');
 
@@ -92,18 +69,18 @@ $(document).ready(function() {
     function() {
 
       // Add the shadow class on hover
-      $(this).addClass('shadowed'); 
+      $(this).addClass('shadowed');
 
-      
+
     },
     function() {
 
       // Remove the shadow class when the mouse leaves
-      $(this).removeClass('shadowed'); 
+      $(this).removeClass('shadowed');
 
     }
   );
 
-  
-  renderTweets(data);
+
+  // renderTweets(data);
 });

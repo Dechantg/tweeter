@@ -22,7 +22,6 @@ module.exports = function(DataHelpers) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
       return;
     }
-    console.log(req.body.text.length)
     const tweetText = req.body.text;
 
     if (tweetText.length > 140) {
@@ -30,7 +29,6 @@ module.exports = function(DataHelpers) {
       return;
     }
 
-    console.log(tweetText.length)
 
 
    

@@ -1,142 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
 
-
-
-
-
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/tweet-feed-box.css" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
 
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-  </head>
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet-feed-box.css" type="text/css" />
 
 
-  <body>
-    
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <div class="nav-container">
-        <span class="left-text">TWEETER</span>
-        <div class="right-text">
-          <div class="right-text-content">
-            Write a new tweet
-          </div>
-          <div class="right-text-arrows">
-            <i class="fa-solid fa-angles-down"></i>
-          </div>
+
+
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js"
+    integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+
+<body>
+
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <div class="nav-container">
+      <span class="left-text">TWEETER</span>
+      <div class="right-text">
+        <div class="right-text-content">
+          Write a new tweet
+        </div>
+        <div class="right-text-arrows">
+          <i class="fa-solid fa-angles-down"></i>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <header class="header">
-      <div>
-        <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-        <h2>Your Name</h2>
-      </div>
-    </header>
+  <header class="header">
+    <div>
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div>
+      <h2>Your Name</h2>
+    </div>
+  </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2>What are you humming about?"</h2>
-        <form id="tweet-form" action="/tweets" method="POST">
-          
-          <textarea name="text" id="tweet-text" ></textarea>
-          <div>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-        <script>
-          $(document).ready(function() {
-            $('#tweet-form').submit(function(event) {
-             
-              // Prevent the default form submission
-              event.preventDefault(); 
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <section class="new-tweet">
+      <h2>What are you humming about?"</h2>
+      <form id="tweet-form" action="/tweets" method="POST">
+        <textarea name="text" id="tweet-text"></textarea>
+        <div>
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+      <script>
+       $(document).ready(function() {
+  $('#tweet-form').submit(function(event) {
+    event.preventDefault();
+    const tweetText = $('#tweet-text').val().trim();
 
-              // Serialize the form data
-              var formData = $(this).serialize(); 
-              
-              $.ajax({
-                type: 'POST',
-                url: '/tweets',
-                data: formData,
-                success: function(response) {
-                  $('#tweet-text').val('');
-
-                }
-              });
-            });
+    if (tweetText.length === 0 || tweetText === null) {
+      alert('Please enter a tweet before submitting.');
+    } else if (tweetText.length > 140) {
+      alert('Your tweet is too long. Please keep it under 140 characters.');
+    } else {
+      $('#error-message').text('');
+      var formData = $(this).serialize();
+      $.ajax({
+        type: 'POST',
+        url: '/tweets',
+        data: formData,
+        success: function(response) {
+          $('#tweet-text').val('');
+          // After successfully adding the new tweet, retrieve the updated tweet list.
+          $.ajax('/tweets', {
+            method: 'GET',
+            dataType: 'json',
+          }).then(function(newTweetsData) {
+            // Prepend the new tweet to the tweets container.
+            renderTweets(newTweetsData);
           });
-          $('#more-tweet').on('click', function () {
-      console.log('Button clicked, performing ajax call...');
-      $.ajax('/tweets', {
-        method: 'GET',
-        dataType: 'json',
-      })
-      .then(function (moreTweetsData) {
-        console.log('Success: ', moreTweetsData);
-
-        // Render new tweets with time-ago formatted dates
-        renderTweets(moreTweetsData);
+        }
       });
+    }
+  });
+
+  $('#more-tweet').on('click', function() {
+    console.log('Button clicked, performing ajax call...');
+    $.ajax('/tweets', {
+      method: 'GET',
+      dataType: 'json',
+    }).then(function(moreTweetsData) {
+      console.log('Success: ', moreTweetsData);
+      renderTweets(moreTweetsData);
     });
-        </script>
-      </section>
-      <section class="main-container">
-        <button id="more-tweet">More Tweet</button>
-        <script>
-          $(function() {
-        
-            // Perform the AJAX call immediately
-            console.log('Performing automatic AJAX call...');
-            $.ajax('/tweets', {
-              method: 'GET',
-              dataType: 'json',
-            })
-            .then(function (moreTweetsData) {
+  });
+});
+      </script>
+    </section>
+    <section class="main-container">
+      <div id="tweets-container"></div>
+      <button id="more-tweet">More Tweet</button>
+      <script>
+        $(function() {
+
+          // Perform the AJAX call immediately
+          console.log('Performing automatic AJAX call...');
+          $.ajax('/tweets', {
+            method: 'GET',
+            dataType: 'json',
+          })
+            .then(function(moreTweetsData) {
               console.log('Success: ', moreTweetsData);
-        
+
               renderTweets(moreTweetsData);
 
-        
+
               $('#more-tweet').replaceWith('New content loaded');
             });
-          });
-        </script>
-  
-      </section>
-    </main>
-   
-  </body>
+        });
+      </script>
+
+    </section>
+  </main>
+
+</body>
+
 </html>
