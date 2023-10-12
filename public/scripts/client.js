@@ -61,20 +61,22 @@ const createTweetElement = function(tweet) {
   
   // add date and icons in footer. convert date to day only
   const $footer = $('<div>').addClass('tweet-footer');
-  const $date = $('<div>').text(new Date(tweet.created_at).toLocaleDateString());
+
+  // Use $.timeago to display the time ago information
+  const $timeAgo = $('<div>').text($.timeago(new Date(tweet.created_at)));
+
   const $icons = $('<div>');
   const $flagIcon = $('<i>').addClass('fas fa-flag icon');
   const $repeatIcon = $('<i>').addClass('fas fa-retweet icon');
   const $heartIcon = $('<i>').addClass('fas fa-heart icon');
   $icons.append($flagIcon, $repeatIcon, $heartIcon);
 
-  $footer.append($date, $icons);
+  $footer.append($timeAgo, $icons);
 
   $article.append($header, $textContent, $footer);
 
   return $article;
-}
-
+};
 
 const loadTweets = function(tweet) {
 

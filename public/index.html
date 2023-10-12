@@ -80,7 +80,7 @@
         <script>
           $(document).ready(function() {
             $('#tweet-form').submit(function(event) {
-
+             
               // Prevent the default form submission
               event.preventDefault(); 
 
@@ -92,21 +92,50 @@
                 url: '/tweets',
                 data: formData,
                 success: function(response) {
-                  
+                  $('#tweet-text').val('');
+
                 }
               });
             });
           });
+          $('#more-tweet').on('click', function () {
+      console.log('Button clicked, performing ajax call...');
+      $.ajax('/tweets', {
+        method: 'GET',
+        dataType: 'json',
+      })
+      .then(function (moreTweetsData) {
+        console.log('Success: ', moreTweetsData);
+
+        // Render new tweets with time-ago formatted dates
+        renderTweets(moreTweetsData);
+      });
+    });
         </script>
       </section>
       <section class="main-container">
+        <button id="more-tweet">More Tweet</button>
+        <script>
+          $(function() {
+        
+            // Perform the AJAX call immediately
+            console.log('Performing automatic AJAX call...');
+            $.ajax('/tweets', {
+              method: 'GET',
+              dataType: 'json',
+            })
+            .then(function (moreTweetsData) {
+              console.log('Success: ', moreTweetsData);
+        
+              renderTweets(moreTweetsData);
 
-
+        
+              $('#more-tweet').replaceWith('New content loaded');
+            });
+          });
+        </script>
   
       </section>
-    </main>
-    <main>
-
     </main>
    
   </body>
