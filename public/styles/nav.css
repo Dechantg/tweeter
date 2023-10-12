@@ -8,10 +8,10 @@ nav {
   width: 100%;
   background-color: blue;
   z-index: 1;
-  top: 0; /* Keep the nav bar at the top of the viewport */
+  top: 0;
 }
 
-
+/* define nav container size and location */
 .nav-container {
   height: 120px;
   display: flex;
@@ -22,7 +22,7 @@ nav {
 
 
 
-
+/* set left text. margin and size */
 .left-text {
   font-family: 'Bungee', sans-serif;
   color: white;
@@ -32,6 +32,7 @@ nav {
 
 }
 
+/* set left text orientation and size */
 .right-text {
   font-family: 'Bungee', sans-serif;
   color: white;
@@ -40,6 +41,7 @@ nav {
   margin-right: 1.5em;
 }
 
+/* fix down arrows under the right size text */
 .right-text-arrows {
   display: flex;
   justify-content: center;

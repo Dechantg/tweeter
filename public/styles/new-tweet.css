@@ -2,15 +2,16 @@
 
 /* CSS for styling the tweet text input area */
 
+/* set new tweet box, make sure it is placed low enough to not be blocked by header */
 .new-tweet {
   position: absolute;
-  top: 420px; /* Ensure that new-tweet doesn't overlap with the nav bar */
+  top: 420px;
   left: 5%;
   width: 90%;
   padding: 20px; /* Adjust the padding as needed */
 }
 
-
+/* format the new tweet input box */
 #tweet-text {
   width: 550px;
   height: 120px;
@@ -38,22 +39,9 @@
   cursor: pointer;
 }
 
-#tweet-text::placeholder {
-  color: #888;
-  font-family: sans-serif;
-  content: attr(placeholder);
-  position: absolute;
-  pointer-events: none; 
-  line-height: 100px; 
-}
 
-.new-tweet h2 {
-  font-family: sans-serif;
-  font-size: 25px;
-  margin-bottom: 10px;
-  text-align: left;
-}
 
+/* format the tweet counter to place on right, size and font */
 .new-tweet .counter {
   font-family: 'Bungee', sans-serif;
   text-align: right;

@@ -22,10 +22,18 @@ module.exports = function(DataHelpers) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
       return;
     }
-
+    console.log(req.body.text.length)
     const tweetText = req.body.text;
-    console.log(tweetText)
 
+    if (tweetText.length > 140) {
+      res.status(400).json({ error: 'invalid request: tweet exceeds max length'});
+      return;
+    }
+
+    console.log(tweetText.length)
+
+
+   
     const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
     const tweet = {
       user: user,
