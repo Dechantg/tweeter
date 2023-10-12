@@ -76,6 +76,15 @@ const createTweetElement = function(tweet) {
 }
 
 
+const loadTweets = function(tweet) {
+
+
+
+}
+
+
+
+
 $(document).ready(function() {
   $('.tweets-article').hover(
     function() {
@@ -92,5 +101,7 @@ $(document).ready(function() {
 
     }
   );
+
+  
   renderTweets(data);
 });
