@@ -1,5 +1,3 @@
-
-
 /* CSS for styling the tweet text input area */
 
 /* set new tweet box, make sure it is placed low enough to not be blocked by header */
@@ -8,7 +6,8 @@
   top: 420px;
   left: 5%;
   width: 90%;
-  padding: 20px; /* Adjust the padding as needed */
+  padding: 20px;
+  /* Adjust the padding as needed */
 }
 
 /* format the new tweet input box */
@@ -29,13 +28,13 @@
 
 /* Style the tweet button */
 .new-tweet button {
-  background-color: blue; 
-  
-  color: white; 
+  background-color: blue;
+
+  color: white;
   font-family: 'Bungee', sans-serif;
   font-size: 24px;
   padding: 10px 20px;
-  border: none; 
+  border: none;
   cursor: pointer;
 }
 
@@ -47,12 +46,28 @@
   text-align: right;
   margin-top: 5px;
   margin-right: 4em;
-  
+
   float: right;
-  color: black; /* Default text color */
+  color: black;
+  /* Default text color */
 }
 
 /* Define the negative class for changing color to red */
 .new-tweet .negative {
   color: red;
+}
+
+
+/* format error message to show up if data entry invalid */
+.error-message {
+  font-family: sans-serif;
+  border: 3px solid red; 
+  font-size: 34px;
+
+  color: red;
+  text-align: center;
+
+  font-weight: bold;
+  margin-top: 10px;
+  display: none;
 }
