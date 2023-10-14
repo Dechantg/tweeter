@@ -26,10 +26,10 @@
 
 .tweets-article {
   border: 3px solid #ccc;
-  padding: 2%; /* Use percentage for padding to make it relative to the container's width */
-  margin-bottom: 2%; /* Use percentage for margin to make it relative to the container's width */
+  padding: 2%; 
+  margin-bottom: 2%;
   background-color: #f4f1ec;
-  width: 100%; /* Use 100% to make it relative to the container's width */
+  width: 100%;
 }
 .tweets-article h2 {
   color: #271bca;
@@ -48,11 +48,11 @@ margin-left: auto;
 }
 
 #tweets {
-  width: 80%; /* Adjust this as needed, but keep it in relative units like percentage */
-  font-size: 2vw; /* Use viewport width (vw) for font size to make it relative to the screen width */
+  width: 80%; 
+  font-size: 2vw; 
   font-family: sans-serif;
   border: none;
-  border-bottom: 0.5vw solid #ccc; /* Use viewport width (vw) for border to make it relative to the screen width */
+  border-bottom: 0.5vw solid #ccc; 
   background-color: #f4f1ec;
   text-align: left;
   caret-color: transparent;
@@ -62,8 +62,9 @@ margin-left: auto;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* New color on hover */
 .icon.fa-retweet:hover {
-  color: #d8fb5b; /* New color on hover */
+  color: #d8fb5b; 
 }
 
 .fa-flag:hover {
