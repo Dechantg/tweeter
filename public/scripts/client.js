@@ -15,7 +15,7 @@ const renderTweets = function(tweets) {
     const $tweet = createTweetElement(tweet);
     $tweetsContainer.prepend($tweet);
   }
-}
+};
 
 
 
@@ -55,11 +55,6 @@ const createTweetElement = function(tweet) {
   return $article;
 };
 
-const loadTweets = function(tweet) {
-
-
-
-}
 
 
 

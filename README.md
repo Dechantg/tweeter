@@ -2,17 +2,30 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+This project was done as part of Lighthouse Labs' Web Bootcamp program. It uses AJAX, HTML5, JQuery, and CSS.
+The project consists of a home feed page. There is a Tweet Generator that you can enter sample text into and a random name and id is generated and pushed into the feed. The page changes format based upon screen size and. Tweet feed shadowboxes when moused over and the icons on the tweeterfeed change colour when moused over.
+
+## Screenshots
+
+!["Screenshot of URLs page"](https://github.com/Dechantg/tweeter/blob/master/Docs/tweeter-desktop-random-id-screenshot.jpg)
+!["Screenshot of URLs page"](https://github.com/Dechantg/tweeter/blob/master/Docs/tweeter-desktop-screenshot.jpg)
+!["Screenshot of URLs page"](https://github.com/Dechantg/tweeter/blob/master/Docs/tweeter-empty-tweet-error.jpg)
+!["Screenshot of URLs page"](https://github.com/Dechantg/tweeter/blob/master/Docs/tweeter-message-shadowbox-colour-change-icon.jpg)
+!["Screenshot of URLs page"](https://github.com/Dechantg/tweeter/blob/master/Docs/tweeter-mobile-horizontal-view.png)
+!["Screenshot of URLs page"](https://github.com/Dechantg/tweeter/blob/master/Docs/tweeter-mobile-view-vertical.png)
+!["Screenshot of URLs page"](https://github.com/Dechantg/tweeter/blob/master/Docs/tweeter-too-long-tweet-error.jpg)
+
+
 
 ## Getting Started
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+Install npm and install all dependancies using npm install. The JSON Package is confirgured to start the demon with npm start.
 
 ## Dependencies
 
+- NPM
 - Express
 - Node 5.10.x or above
+- Body-parser
+- chance
+
