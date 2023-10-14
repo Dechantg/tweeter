@@ -25,7 +25,52 @@ body {
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
+
  */
+/* Media break for screens exceeding 768px */
+@media screen and (min-width: 769px) {
+  .header {
+    width: 33%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #f4f1ec; /* Set the header background color to match the container */
+  }
+  .header .profile-container {
+    width: 33%;
+    background-color: #003814;
+    background-image: url("http://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .container {
+    
+    display: flex;
+    flex-direction: row;
+    margin-left: 33%;
+  }
+  .main-container {
+    display: flex;
+    margin-top: 400px; 
+
+    flex-direction: row;
+  }
+  .new-tweet {
+    flex: 1; 
+    top: 220px;
+
+    max-width: 66%;
+    position: relative;
+  }
+  .tweet-article {
+    flex: 1; 
+    max-width: 66%;
+    position: relative;
+  }
+}
+
+
 
  .container {
   display: flex;
@@ -47,6 +92,12 @@ body {
   padding: 10px;
   border: 1px solid #f4f1ec; 
   height: 100%;
-  margin-top: 800px; 
+  margin-top: 29.5em; 
   width: 90%;
 }
+
+.container h2 {
+font-size: 1em;
+
+}
+

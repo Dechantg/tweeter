@@ -3,7 +3,7 @@
 /* set new tweet box, make sure it is placed low enough to not be blocked by header */
 .new-tweet {
   position: absolute;
-  top: 420px;
+  top: 320px;
   left: 5%;
   width: 90%;
   padding: 20px;
@@ -14,7 +14,7 @@
 #tweet-text {
   width: 550px;
   height: 120px;
-  font-size: 28px;
+  font-size: .9em;
   font-family: sans-serif;
   width: 90%;
 

@@ -11,6 +11,7 @@
   border-bottom: 1px solid blue;
 }
 
+
 .tweet-header {
   display: flex;
   align-items: center;
@@ -24,14 +25,12 @@
 
 
 .tweets-article {
-  border: 3px solid #ccc; 
-  padding: 10px; 
-  margin-bottom: 20px; 
-  background-color: #f4f1ec; 
-  width: 100%;
-  transition: box-shadow 0.3s;
+  border: 3px solid #ccc;
+  padding: 2%; /* Use percentage for padding to make it relative to the container's width */
+  margin-bottom: 2%; /* Use percentage for margin to make it relative to the container's width */
+  background-color: #f4f1ec;
+  width: 100%; /* Use 100% to make it relative to the container's width */
 }
-
 .tweets-article h2 {
   color: #271bca;
 
@@ -49,19 +48,15 @@ margin-left: auto;
 }
 
 #tweets {
-  width: 250px;
-  height: 120px;
-  font-size: 28px;
+  width: 80%; /* Adjust this as needed, but keep it in relative units like percentage */
+  font-size: 2vw; /* Use viewport width (vw) for font size to make it relative to the screen width */
   font-family: sans-serif;
-  width: 100%;
-
   border: none;
-  border-bottom: 5px solid #ccc;
+  border-bottom: 0.5vw solid #ccc; /* Use viewport width (vw) for border to make it relative to the screen width */
   background-color: #f4f1ec;
   text-align: left;
   caret-color: transparent;
 }
-
 
 .tweets-article:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
