@@ -15,9 +15,15 @@ const renderTweets = function(tweets) {
     const $tweet = createTweetElement(tweet);
     $tweetsContainer.prepend($tweet);
   }
+
+
 };
 
-
+const renderMostRecentTweet = function(tweet) {
+  const $tweetsContainer = $('#tweets-container');
+  const $tweet = createTweetElement(tweet);
+  $tweetsContainer.prepend($tweet);
+};
 
 const createTweetElement = function(tweet) {
 

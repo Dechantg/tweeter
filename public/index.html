@@ -88,6 +88,9 @@
       </form>
 
       <script>
+        let latestTweetTimestamp = null;
+        let tweetIdsInFeed = new Set();
+
         $(document).ready(function() {
 
           $('#tweet-text').on('input', function() {
@@ -115,36 +118,28 @@
                 data: formData,
                 success: function(response) {
                   $('#tweet-text').val('');
+                  $('output[name="counter"]').text('140');
                   $('.errorMessage').show();
                   // After successfully adding the new tweet, retrieve the updated tweet list.
                   $.ajax('/tweets', {
                     method: 'GET',
                     dataType: 'json',
                   }).then(function(newTweetsData) {
-                    // Prepend the new tweet to the tweets container.
-                    renderTweets(newTweetsData);
+                    // Prepend the new tweet to the tweets container. using the last item in storage
+                    const mostRecentTweet = newTweetsData[newTweetsData.length - 1];
+                    renderMostRecentTweet(mostRecentTweet);
                   });
                 },
               });
             }
           });
 
-          $('#more-tweet').on('click', function() {
-            console.log('Button clicked, performing ajax call...');
-            $.ajax('/tweets', {
-              method: 'GET',
-              dataType: 'json',
-            }).then(function(moreTweetsData) {
-              console.log('Success: ', moreTweetsData);
-              renderTweets(moreTweetsData);
-            });
-          });
         });
+
       </script>
     </section>
     <section class="main-container">
       <div id="tweets-container"></div>
-      <button id="more-tweet">More Tweet</button>
       <script>
         $(function() {
 
