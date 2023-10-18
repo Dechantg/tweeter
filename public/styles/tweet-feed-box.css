@@ -8,8 +8,10 @@
   flex-direction: column;
   transition: box-shadow 0.3s;
   border-bottom: 1px solid blue;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-line;
 }
-
 
 .tweet-header {
   display: flex;
