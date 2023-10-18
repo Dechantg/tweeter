@@ -19,6 +19,7 @@ const renderTweets = function(tweets) {
 
 };
 
+// 
 const renderMostRecentTweet = function(tweet) {
   const $tweetsContainer = $('#tweets-container');
   const $tweet = createTweetElement(tweet);
